@@ -1,6 +1,8 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use Illuminate\Http\Request;
+use App\Http\Controllers\TodoTaskController;
 
 /*
 |--------------------------------------------------------------------------
@@ -17,8 +19,10 @@ use Illuminate\Support\Facades\Route;
 // Route::get('/', function () {
 //     return view('welcome');
 // });
-Route::get('/', function () {
-    return view('home', [
-        'task'=> 'task2',
-    ]);
-});
+Route::get('/', [TodoTaskController::class, 'index']);
+Route::post('/',[ TodoTaskController::class, 'store']);
+
+Route::delete('/{id}',[ TodoTaskController::class, 'destroy']);
+// Route::post('/', function () {
+//     return 'ini untuk post';
+// });
