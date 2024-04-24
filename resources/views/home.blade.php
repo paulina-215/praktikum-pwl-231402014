@@ -56,7 +56,7 @@
           <form action="/{{$task->id}}" method="POST">
             @method('DELETE')
             @csrf
-            <button class="btn btn-sm btn-success" onclick="return cofirm('are you sure')">Done</button>
+            <button class="btn btn-sm btn-success" onclick="return confirm('are you sure')">Done</button>
           </form>
           
         </div>
