@@ -52,8 +52,9 @@
           <button class="btn btn-sm shadow-lg bg-yellow-500">Edit</button>
         </div>
         <div class="tooltip" data-tip="Selesai">
+          
           <form action="/{{$task->id}}" method="POST">
-            @method('delete')
+            @method('DELETE')
             @csrf
             <button class="btn btn-sm btn-success" onclick="return cofirm('are you sure')">Done</button>
           </form>

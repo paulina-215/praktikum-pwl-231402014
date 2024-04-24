@@ -37,4 +37,10 @@ class TodoTaskController extends Controller
         Task::destroy($request->id);
         return redirect('/')-> with('success', 'Post has been deleted!');
     }
+
+    // public function deleteTask(Request $request)
+    // {
+    //     Task::where('task_id', $request->id)->delete();
+    //     return redirect('/');
+    // }
 }
